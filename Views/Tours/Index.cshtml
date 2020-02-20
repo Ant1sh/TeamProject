@@ -1,11 +1,74 @@
-﻿@model IEnumerable<TeamProject.Models.Tour>
+﻿[3:04 PM] Youfeng Liu
 
+
+
+
+
+
+
+        Text
+
+
+
+
+@model IEnumerable<TeamProject.Models.Tour>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destination)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Discription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Departure)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortDiscription)
+                    <a asp-action="Details" asp-route-id="@item.TourId">View More</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departure)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arrival)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TourId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TourId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TourId">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+<!-- Projects-->
 <section class="section section-lg bg-gray-lighter text-center novi-background bg-cover">
     <div class="container container-wide">
         @* Title and title description *@
@@ -28,9 +91,11 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <div class="titled-gallery-caption text-center">Bora Bora</div>
-                    <p class="card-text">Description for Paris</p>
+                    <div class="titled-gallery-caption text-center">France, Paris</div>
+                    <p class="card-text">The French capital is one that has been drawing visitors for centuries. From its wonderful historic monuments to its exceptional cuisine, it is a destination unlike any other. Wander in and out of museums, cafes, farmers markets, beautiful gardens and enjoy the romance of the city.</p>
                     <br />
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">BUY IT!</a>
                 </div>
             </div>
@@ -45,9 +110,11 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <div class="titled-gallery-caption text-center">Egypt</div>
-                    <p class="card-text">Description for Egypt</p>
+                    <div class="titled-gallery-caption text-center">USA, Boston</div>
+                    <p class="card-text">The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more.</p>
                     <br />
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">BUY IT!</a>
                 </div>
             </div>
@@ -62,9 +129,11 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <div class="titled-gallery-caption text-center">Thailand</div>
-                    <p class="card-text">Description for Thailand</p>
+                    <div class="titled-gallery-caption text-center">Italy, Venice</div>
+                    <p class="card-text">There’s something extremely romantic and charming about Venice. Imagine strolling down alleyways, eating authentic gelato while window shopping for Italian leather handbags. Whether it’s the Basilica di San Marco located in the heart of the Piazza San Marco, the Rialto Bridge, or the Ponte dei Sospiri, there is so much history to be seen on this magical little island, it can seem very overwhelming.</p>
                     <br />
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">BUY IT!</a>
                 </div>
             </div>
@@ -80,9 +149,11 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <div class="titled-gallery-caption text-center">Dominicana</div>
-                    <p class="card-text">Description for Dominicana</p>
+                    <div class="titled-gallery-caption text-center">Spain</div>
+                    <p class="card-text">From Madrid to Barcelona to Girona to Bilbao, it’s such a vibrant country. Whether you hit the slopes of the Sierra Nevada, wander the vineyards of Rioja, or worship the sun in the Canary Islands, Spain is guaranteed to impress you any day of the week.</p>
                     <br />
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">BUY IT!</a>
                 </div>
             </div>
@@ -98,9 +169,11 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <div class="titled-gallery-caption text-center">Jamaica</div>
-                    <p class="card-text">Description for Jamaica</p>
+                    <div class="titled-gallery-caption text-center">Egypt</div>
+                    <p class="card-text">Springtime in Egypt is one of the most popular times to visit. The weather is warmer but it’s still quite pleasant. April and May are also considered to be the best months to enjoy the Red Sea for diving, swimming, and soaking up the Egyptian sun.</p>
                     <br />
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">BUY IT!</a>
                 </div>
             </div>
@@ -116,24 +189,18 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <div class="titled-gallery-caption text-center">Huntington Beach</div>
-                    <p class="card-text">Description for Huntington Beach</p>
+                    <div class="titled-gallery-caption text-center">UK, London</div>
+                    <p class="card-text">The capital of the United Kingdom is a thriving multicultural metropolis. The contrast between the spectacular historic sights and the lively cultural scene makes a visit to London an interesting and exciting adventure. Wander through St. James park, visit Westminster Abbey, explore the streets of Shoreditch, and take a ride up the River Thames. London's incredible shopping, endless sights, friendly locals, and vibrant nightlife offer something for every kind of traveler.</p>
                     <br />
+                </div>
+                <div class="card-footer">
                     <a href="#" class="btn btn-primary">BUY IT!</a>
                 </div>
             </div>
-            <div class="col-12"><a class="button button-secondary button-nina" href="#">view all Destinations</a></div>
+            <div class="col-12"><a class="button button-secondary button-nina">More destinations will be available soon, Keep tracking us!</a></div>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
 <!-- CTA Gradient-->
 <section class="section section-xs text-center bg-gray-700 novi-background bg-cover">
     <div class="container container-wide">
@@ -142,3 +209,8 @@
         </div>
     </div>
 </section>
+
+
+
+
+
