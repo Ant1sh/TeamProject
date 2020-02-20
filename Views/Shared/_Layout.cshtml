@@ -120,13 +120,27 @@
                                     <li>
                                         <a asp-controller="Home" asp-action="Contacts">Contacts</a>
                                     </li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        if (User.IsInRole("Admin"))
+                                        {
+                                            
+                                            <li>
+                                                <a asp-controller="ManageTours" asp-action="Index">Admin Page</a>
+                                            </li>
+                                        }
+                                        
+                                    }
                                     <li>
                                         <a asp-controller="Tours" asp-action="Index">Tours</a>
                                     </li>
+
+
+
                                     <li>
-                                        <partial name="_LoginPartial"/>
+                                        <partial name="_LoginPartial" />
                                     </li>
-                                   
+
                                 </ul>
                             </div>
                         </div>

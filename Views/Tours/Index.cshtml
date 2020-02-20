@@ -1,17 +1,4 @@
-﻿[3:04 PM] Youfeng Liu
-
-
-
-
-
-
-
-        Text
-
-
-
-
-@model IEnumerable<TeamProject.Models.Tour>
+﻿@model IEnumerable<TeamProject.Models.Tour>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -68,6 +55,7 @@
     }
         </tbody>
     </table>*@
+
 <!-- Projects-->
 <section class="section section-lg bg-gray-lighter text-center novi-background bg-cover">
     <div class="container container-wide">
@@ -76,15 +64,15 @@
             <div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                 <h3>Destinations</h3>
                 <div class="divider divider-decorate"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                <p class="font-weight-bold">Check out our deals!!</p>
             </div>
         </div>
         <div class="row row-50" data-lightgallery="group">
             <div class="card col-sm-12 col-md-6 col-lg-4">
-                <a class="gallery-item titled-gallery-item" href="images/project-1-1200x800-original.jpg" data-lightgallery="item">
+                <a class="gallery-item titled-gallery-item" href="~/images/Paris.jpg" data-lightgallery="item">
                     <div class="gallery-item-image">
                         <figure>
-                            <img src="images/project-1-570x380.jpg" alt="" width="570" height="380" />
+                            <img src="~/images/paris570x370.jpg" alt="" width="570" height="380" />
                         </figure>
                         <div class="caption">
                         </div>
@@ -92,7 +80,7 @@
                 </a>
                 <div class="card-body">
                     <div class="titled-gallery-caption text-center">France, Paris</div>
-                    <p class="card-text">The French capital is one that has been drawing visitors for centuries. From its wonderful historic monuments to its exceptional cuisine, it is a destination unlike any other. Wander in and out of museums, cafes, farmers markets, beautiful gardens and enjoy the romance of the city.</p>
+                    <p class="card-text font-weight-bold">The French capital is one that has been drawing visitors for centuries. From its wonderful historic monuments to its exceptional cuisine, it is a destination unlike any other. Wander in and out of museums, cafes, farmers markets, beautiful gardens and enjoy the romance of the city.</p>
                     <br />
                 </div>
                 <div class="card-footer">
@@ -100,10 +88,10 @@
                 </div>
             </div>
             <div class="card col-sm-12 col-md-6 col-lg-4">
-                <a class="gallery-item titled-gallery-item" href="images/project-2-1200x800-original.jpg" data-lightgallery="item">
+                <a class="gallery-item titled-gallery-item" href="~/images/BostonMain.jpg" data-lightgallery="item">
                     <div class="gallery-item-image">
                         <figure>
-                            <img src="images/project-2-570x380.jpg" alt="" width="570" height="380" />
+                            <img src="~/images/boston570x370.png" alt="" width="570" height="380" />
                         </figure>
                         <div class="caption">
                         </div>
@@ -111,7 +99,7 @@
                 </a>
                 <div class="card-body">
                     <div class="titled-gallery-caption text-center">USA, Boston</div>
-                    <p class="card-text">The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more.</p>
+                    <p class="card-text font-weight-bold">The United States is the perfect destination for scenic drives, delicious food, cosmopolitan city life, wilderness, cultural diversity, beautiful beaches, and so much more.</p>
                     <br />
                 </div>
                 <div class="card-footer">
@@ -119,10 +107,10 @@
                 </div>
             </div>
             <div class="card col-sm-12 col-md-6 col-lg-4">
-                <a class="gallery-item titled-gallery-item" href="images/project-3-1200x800-original.jpg" data-lightgallery="item">
+                <a class="gallery-item titled-gallery-item" href="~/images/Vinece.jpg" data-lightgallery="item">
                     <div class="gallery-item-image">
                         <figure>
-                            <img src="images/project-3-570x380.jpg" alt="" width="570" height="380" />
+                            <img src="~/images/Venice570x370.jpg" alt="" width="570" height="380" />
                         </figure>
                         <div class="caption">
                         </div>
@@ -130,7 +118,7 @@
                 </a>
                 <div class="card-body">
                     <div class="titled-gallery-caption text-center">Italy, Venice</div>
-                    <p class="card-text">There’s something extremely romantic and charming about Venice. Imagine strolling down alleyways, eating authentic gelato while window shopping for Italian leather handbags. Whether it’s the Basilica di San Marco located in the heart of the Piazza San Marco, the Rialto Bridge, or the Ponte dei Sospiri, there is so much history to be seen on this magical little island, it can seem very overwhelming.</p>
+                    <p class="card-text font-weight-bold">There’s something extremely romantic and charming about Venice. Imagine strolling down alleyways, eating authentic gelato while window shopping for Italian leather handbags. Whether it’s the Basilica di San Marco located in the heart of the Piazza San Marco, the Rialto Bridge, or the Ponte dei Sospiri, there is so much history to be seen on this magical little island, it can seem very overwhelming.</p>
                     <br />
                 </div>
                 <div class="card-footer">
@@ -139,10 +127,10 @@
             </div>
             @*Dominicana*@
             <div class="card col-sm-12 col-md-6 col-lg-4">
-                <a class="gallery-item titled-gallery-item" href="images/project-4-1200x800-original.jpg" data-lightgallery="item">
+                <a class="gallery-item titled-gallery-item" href="~/images/Spain.jpg" data-lightgallery="item">
                     <div class="gallery-item-image">
                         <figure>
-                            <img src="images/project-4-570x380.jpg" alt="" width="570" height="380" />
+                            <img src="~/images/spain570x370.jpg" alt="" width="570" height="380" />
                         </figure>
                         <div class="caption">
                         </div>
@@ -150,7 +138,7 @@
                 </a>
                 <div class="card-body">
                     <div class="titled-gallery-caption text-center">Spain</div>
-                    <p class="card-text">From Madrid to Barcelona to Girona to Bilbao, it’s such a vibrant country. Whether you hit the slopes of the Sierra Nevada, wander the vineyards of Rioja, or worship the sun in the Canary Islands, Spain is guaranteed to impress you any day of the week.</p>
+                    <p class="card-text font-weight-bold">From Madrid to Barcelona to Girona to Bilbao, it’s such a vibrant country. Whether you hit the slopes of the Sierra Nevada, wander the vineyards of Rioja, or worship the sun in the Canary Islands, Spain is guaranteed to impress you any day of the week.</p>
                     <br />
                 </div>
                 <div class="card-footer">
@@ -159,10 +147,10 @@
             </div>
             @*Jamaica*@
             <div class="card col-sm-12 col-md-6 col-lg-4">
-                <a class="gallery-item titled-gallery-item" href="images/project-5-1200x800-original.jpg" data-lightgallery="item">
+                <a class="gallery-item titled-gallery-item" href="~/images/sharm-el-sheikh.jpg" data-lightgallery="item">
                     <div class="gallery-item-image">
                         <figure>
-                            <img src="images/project-5-570x380.jpg" alt="" width="570" height="380" />
+                            <img src="~/images/egypt.jpg" alt="" width="570" height="380" />
                         </figure>
                         <div class="caption">
                         </div>
@@ -170,7 +158,7 @@
                 </a>
                 <div class="card-body">
                     <div class="titled-gallery-caption text-center">Egypt</div>
-                    <p class="card-text">Springtime in Egypt is one of the most popular times to visit. The weather is warmer but it’s still quite pleasant. April and May are also considered to be the best months to enjoy the Red Sea for diving, swimming, and soaking up the Egyptian sun.</p>
+                    <p class="card-text font-weight-bold">Springtime in Egypt is one of the most popular times to visit. The weather is warmer but it’s still quite pleasant. April and May are also considered to be the best months to enjoy the Red Sea for diving, swimming, and soaking up the Egyptian sun.</p>
                     <br />
                 </div>
                 <div class="card-footer">
@@ -179,10 +167,10 @@
             </div>
             @*Huntington Beach*@
             <div class="card col-sm-12 col-md-6 col-lg-4">
-                <a class="gallery-item titled-gallery-item" href="images/project-6-1200x800-original.jpg" data-lightgallery="item">
+                <a class="gallery-item titled-gallery-item" href="~/images/UK.jpg" data-lightgallery="item">
                     <div class="gallery-item-image">
                         <figure>
-                            <img src="images/project-6-570x380.jpg" alt="" width="570" height="380" />
+                            <img src="~/images/london570x370.jpg" alt="" width="570" height="380" />
                         </figure>
                         <div class="caption">
                         </div>
@@ -190,7 +178,7 @@
                 </a>
                 <div class="card-body">
                     <div class="titled-gallery-caption text-center">UK, London</div>
-                    <p class="card-text">The capital of the United Kingdom is a thriving multicultural metropolis. The contrast between the spectacular historic sights and the lively cultural scene makes a visit to London an interesting and exciting adventure. Wander through St. James park, visit Westminster Abbey, explore the streets of Shoreditch, and take a ride up the River Thames. London's incredible shopping, endless sights, friendly locals, and vibrant nightlife offer something for every kind of traveler.</p>
+                    <p class="card-text font-weight-bold">The capital of the United Kingdom is a thriving multicultural metropolis. The contrast between the spectacular historic sights and the lively cultural scene makes a visit to London an interesting and exciting adventure. Wander through St. James park, visit Westminster Abbey, explore the streets of Shoreditch, and take a ride up the River Thames. London's incredible shopping, endless sights, friendly locals, and vibrant nightlife offer something for every kind of traveler.</p>
                     <br />
                 </div>
                 <div class="card-footer">
@@ -201,14 +189,7 @@
         </div>
     </div>
 </section>
-<!-- CTA Gradient-->
-<section class="section section-xs text-center bg-gray-700 novi-background bg-cover">
-    <div class="container container-wide">
-        <div class="box-cta-thin">
-            <p class="big"><strong>The most affordable prices!  </strong>&nbsp;<span>Choose your favorite destination!</span>&nbsp;<a class="link-bold" href="#">Order a tour! </a></p>
-        </div>
-    </div>
-</section>
+
 
 
 
