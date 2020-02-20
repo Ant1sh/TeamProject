@@ -5,57 +5,153 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Destination)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Discription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Departure)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Arrival)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Destination)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShortDiscription)
-                <a asp-action="Details" asp-route-id="@item.TourId">View More</a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Departure)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Arrival)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TourId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TourId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TourId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destination)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Discription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Departure)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortDiscription)
+                    <a asp-action="Details" asp-route-id="@item.TourId">View More</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departure)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arrival)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TourId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TourId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TourId">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+
+<!-- Projects-->
+<section class="section section-lg bg-gray-lighter text-center novi-background bg-cover">
+    <div class="container container-wide">
+        <div class="row row-fix row-50 justify-content-md-center">
+            <div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h3>Destinations</h3>
+                <div class="divider divider-decorate"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            </div>
+        </div>
+        <div class="row row-50" data-lightgallery="group">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a class="gallery-item titled-gallery-item" href="images/project-1-1200x800-original.jpg" data-lightgallery="item">
+                    <div class="gallery-item-image">
+                        <figure>
+                            <img src="images/project-1-570x380.jpg" alt="" width="570" height="380" />
+                        </figure>
+                        <div class="caption">
+                        </div>
+                    </div>
+                </a>
+                <div class="titled-gallery-caption"><a href="#">Bora Bora</a></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a class="gallery-item titled-gallery-item" href="images/project-2-1200x800-original.jpg" data-lightgallery="item">
+                    <div class="gallery-item-image">
+                        <figure>
+                            <img src="images/project-2-570x380.jpg" alt="" width="570" height="380" />
+                        </figure>
+                        <div class="caption">
+                        </div>
+                    </div>
+                </a>
+                <div class="titled-gallery-caption"><a href="#">Egypt</a></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a class="gallery-item titled-gallery-item" href="images/project-3-1200x800-original.jpg" data-lightgallery="item">
+                    <div class="gallery-item-image">
+                        <figure>
+                            <img src="images/project-3-570x380.jpg" alt="" width="570" height="380" />
+                        </figure>
+                        <div class="caption">
+                        </div>
+                    </div>
+                </a>
+                <div class="titled-gallery-caption"><a href="#">Thailand</a></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a class="gallery-item titled-gallery-item" href="images/project-4-1200x800-original.jpg" data-lightgallery="item">
+                    <div class="gallery-item-image">
+                        <figure>
+                            <img src="images/project-4-570x380.jpg" alt="" width="570" height="380" />
+                        </figure>
+                        <div class="caption">
+                        </div>
+                    </div>
+                </a>
+                <div class="titled-gallery-caption"><a href="#">Dominicana</a></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a class="gallery-item titled-gallery-item" href="images/project-5-1200x800-original.jpg" data-lightgallery="item">
+                    <div class="gallery-item-image">
+                        <figure>
+                            <img src="images/project-5-570x380.jpg" alt="" width="570" height="380" />
+                        </figure>
+                        <div class="caption">
+                        </div>
+                    </div>
+                </a>
+                <div class="titled-gallery-caption"><a href="#">Jamaica</a></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <a class="gallery-item titled-gallery-item" href="images/project-6-1200x800-original.jpg" data-lightgallery="item">
+                    <div class="gallery-item-image">
+                        <figure>
+                            <img src="images/project-6-570x380.jpg" alt="" width="570" height="380" />
+                        </figure>
+                        <div class="caption">
+                        </div>
+                    </div>
+                </a>
+                <div class="titled-gallery-caption"><a href="#">Huntington Beach</a></div>
+            </div>
+            <div class="col-12"><a class="button button-secondary button-nina" href="#">view all Destinations</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Gradient-->
+<section class="section section-xs text-center bg-gray-700 novi-background bg-cover">
+    <div class="container container-wide">
+        <div class="box-cta-thin">
+            <p class="big"><strong>The most affordable prices!  </strong>&nbsp;<span>Choose your favorite destination!</span>&nbsp;<a class="link-bold" href="#">Order a tour! </a></p>
+        </div>
+    </div>
+</section>
