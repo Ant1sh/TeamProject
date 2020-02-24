@@ -124,12 +124,15 @@
                                     {
                                         if (User.IsInRole("Admin"))
                                         {
-                                            
+
                                             <li>
-                                                <a asp-controller="ManageTours" asp-action="Index">Admin Page</a>
+                                                <a asp-controller="ManageTours" asp-action="Index">Add Tours</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Summary" asp-action="Index">Booking Tours</a>
                                             </li>
                                         }
-                                        
+
                                     }
                                     <li>
                                         <a asp-controller="Tours" asp-action="Index">Tours</a>

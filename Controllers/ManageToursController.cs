@@ -56,7 +56,7 @@ namespace TeamProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TourId,Destination,Price,Departure,Arrival")] Tour tour)
+        public async Task<IActionResult> Create([Bind("TourId,Destination,Price,Discription,Departure,Arrival")] Tour tour)
         {
             if (ModelState.IsValid)
             {

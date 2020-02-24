@@ -28,7 +28,7 @@ namespace TeamProject.Models
         {
             get
             {
-                return Discription.Substring(0,7) + "...";
+                return Discription.Substring(0,12) + "...";
             }
         }
 

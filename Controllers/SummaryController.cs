@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,19 +12,34 @@ using TeamProject.Models;
 
 namespace TeamProject.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class SummaryController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public SummaryController(ApplicationDbContext context)
+        private readonly UserManager<User> _userManager;
+
+        public SummaryController(ApplicationDbContext context, UserManager<User>userManager)
         {
             _context = context;
+            _userManager = userManager;
+
+        }
+
+
+
+        private Task<User> GetCurrentUserAsync()
+        {
+            return _userManager.GetUserAsync(HttpContext.User);
         }
 
         // GET: Summary
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Summaries.Include(s => s.Tour).Include(s => s.User);
+            var user = await GetCurrentUserAsync();
+            //var applicationDbContext = _context.Summaries.Include(s => s.Tour).Include(s => s.User);
+            var applicationDbContext = _context.Summaries
+                .Where(s => s.UserId == user.Id);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -47,11 +64,32 @@ namespace TeamProject.Controllers
         }
 
         // GET: Summary/Create
-        public IActionResult Create()
+        public async Task<IActionResult> CreateAsync(int? id)
         {
-            ViewData["TourId"] = new SelectList(_context.Tours, "TourId", "Destination");
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var Tour = await _context.Tours
+                .FirstOrDefaultAsync(t => t.TourId == id);
+            if (Tour == null)
+            {
+                return NotFound();
+            }
+            //var summary = await _context.Summaries
+            //    .Include(s => s.Tour)
+            //    //.Include(s => s.User)
+            //    .FirstOrDefaultAsync(m => m.TourId == id);
+            //if (summary == null)
+            //{
+            //    return NotFound();
+            //}
+            var user = await GetCurrentUserAsync();
+            ViewData["TourId"] = id;
+
+            //ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["UserId"] = user.Id;
+            return View(Tour);
         }
 
         // POST: Summary/Create
